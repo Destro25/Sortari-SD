@@ -144,22 +144,16 @@ void TWP(vector<long long> &v, int st, int dr, int &begin, int &end)
     {
         if(v[i] < pivot)
         {
-            if(i != begin)
-            {
-                aux = v[i];
-                v[i] = v[begin];
-                v[begin] = aux;
-            }
+            aux = v[i];
+            v[i] = v[begin];
+            v[begin] = aux;
             begin++;
         }
         if(v[i] > pivot)
         {
-            if (i != end)
-            {
-                aux = v[i];
-                v[i] = v[end];
-                v[end] = aux;
-            }
+            aux = v[i];
+            v[i] = v[end];
+            v[end] = aux;
             end--;
             i--;
         }
